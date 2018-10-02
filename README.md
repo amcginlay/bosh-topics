@@ -7,7 +7,7 @@
 - `export BOSH_CA_CERT=/var/tempest/workspaces/default/root_ca_certificate`
 - `export BOSH_ENVIRONMENT=10.0.0.10`
 
-## Commands
+## Non-Destructive Commands
 
 - `bosh --help`
 - `bosh env`
