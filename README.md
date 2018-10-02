@@ -12,7 +12,7 @@
 - `bosh --help`
 - `bosh env`
 - `bosh tasks --recent=10`
-- `bosh task`
+- `bosh task --debug`
 - `bosh stemcells`
 - `bosh releases`
 - `bosh deployments`
