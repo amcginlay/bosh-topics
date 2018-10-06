@@ -18,7 +18,7 @@
 - `bosh deployments`
 - `bosh instances --ps`
 - `bosh cloud-config`
-- `bosh manifest`
+- `bosh manifest` <- download cf manifest and collapse YAML sections using a good text editor
 - `bosh errands`
 - `bosh ssh`
 - `bosh logs`
