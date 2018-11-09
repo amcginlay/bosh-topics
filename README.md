@@ -23,3 +23,7 @@
 - `bosh ssh`
 - `bosh logs`
 - `bosh variables`
+
+## File Copy
+
+- `gcloud compute scp ubuntu@jumpbox:~/workspace/pcf-operator-course/gcp_credentials.json .`
