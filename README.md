@@ -11,7 +11,7 @@
 
 - `bosh --help`
 - `bosh env`
-- `bosh tasks --recent=10`
+- `bosh tasks --recent=30`
 - `bosh task --debug`
 - `bosh stemcells`
 - `bosh releases`
