@@ -1,11 +1,22 @@
 # bosh-topics
 
-## Credentials
+## Export BOSH credentials
 
-- `export BOSH_CLIENT=ops_manager`
-- `export BOSH_CLIENT_SECRET=XXXXXXXXXXXXXX`
-- `export BOSH_CA_CERT=/var/tempest/workspaces/default/root_ca_certificate`
-- `export BOSH_ENVIRONMENT=10.0.0.10`
+```bash
+export $( \
+  om \
+    --skip-ssl-validation \
+    --target ${PCF_OPSMAN_FQDN} \
+    --username admin \
+    --password ${PCF_OPSMAN_ADMIN_PASSWD} \
+    curl \
+      --silent \
+      --path /api/v0/deployed/director/credentials/bosh_commandline_credentials | \
+        jq --raw-output '.credential' \
+)
+```
+
+Use `env | grep BOSH` to inspect the result of the above.
 
 ## Copy Root CA Certificate
 
