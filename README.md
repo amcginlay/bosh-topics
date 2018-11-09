@@ -55,4 +55,4 @@ sudo sh -c \
 
 ## Local File Copy Syntax
 
-- `gcloud compute scp ubuntu@jumpbox:~/workspace/pcf-operator-course/gcp_credentials.json .`
+- `gcloud compute scp ubuntu@jumpbox:~/workspace/pcf-operator-course/${CF_DEPLOYMENT}.yml .`
