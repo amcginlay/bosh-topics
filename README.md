@@ -24,6 +24,6 @@
 - `bosh logs`
 - `bosh variables`
 
-## File Copy
+## Local File Copy Syntax
 
 - `gcloud compute scp ubuntu@jumpbox:~/workspace/pcf-operator-course/gcp_credentials.json .`
