@@ -52,6 +52,7 @@ sudo sh -c \
 - `bosh -d ${DEPLOYMENT_NAME} ssh ${INSTANCE_TYPE}`
 - `bosh -d ${DEPLOYMENT_NAME} logs`
 - `bosh -d ${DEPLOYMENT_NAME} variables`
+- `bosh -d ${DEPLOYMENT_NAME} inspect-release ${RELEASE}/${VERSION}`
 
 ## Local File Copy Syntax
 
