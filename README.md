@@ -44,6 +44,7 @@ sudo sh -c \
 - `bosh task --debug`
 - `bosh stemcells`
 - `bosh releases`
+- `bosh inspect-release ${RELEASE}/${VERSION}`
 - `bosh deployments`
 - `bosh cloud-config`
 - `bosh -d ${DEPLOYMENT_NAME} instances --ps`
@@ -52,7 +53,6 @@ sudo sh -c \
 - `bosh -d ${DEPLOYMENT_NAME} ssh ${INSTANCE_TYPE}`
 - `bosh -d ${DEPLOYMENT_NAME} logs`
 - `bosh -d ${DEPLOYMENT_NAME} variables`
-- `bosh -d ${DEPLOYMENT_NAME} inspect-release ${RELEASE}/${VERSION}`
 
 ## Local File Copy Syntax
 
