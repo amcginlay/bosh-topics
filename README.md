@@ -49,7 +49,7 @@ sudo sh -c \
 - `bosh -d ${DEPLOYMENT_NAME} instances --ps`
 - `bosh -d ${DEPLOYMENT_NAME} manifest > ${DEPLOYMENT_NAME}.yml`
 - `bosh -d ${DEPLOYMENT_NAME} errands`
-- `bosh -d ${DEPLOYMENT_NAME} ssh ${VM_INSTANCE_TYPE}`
+- `bosh -d ${DEPLOYMENT_NAME} ssh ${INSTANCE_TYPE}`
 - `bosh -d ${DEPLOYMENT_NAME} logs`
 - `bosh -d ${DEPLOYMENT_NAME} variables`
 
