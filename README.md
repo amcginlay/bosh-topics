@@ -45,14 +45,14 @@ sudo sh -c \
 - `bosh stemcells`
 - `bosh releases`
 - `bosh deployments`
-- `bosh instances --ps`
 - `bosh cloud-config`
-- `bosh manifest > ${DEPLOYMENT_NAME}.yml`
-- `bosh errands`
-- `bosh ssh`
-- `bosh logs`
-- `bosh variables`
+- `bosh -d ${DEPLOYMENT_NAME} instances --ps`
+- `bosh -d ${DEPLOYMENT_NAME} manifest > ${DEPLOYMENT_NAME}.yml`
+- `bosh -d ${DEPLOYMENT_NAME} errands`
+- `bosh -d ${DEPLOYMENT_NAME} ssh ${VM_INSTANCE_TYPE}`
+- `bosh -d ${DEPLOYMENT_NAME} logs`
+- `bosh -d ${DEPLOYMENT_NAME} variables`
 
 ## Local File Copy Syntax
 
-- `gcloud compute scp ubuntu@jumpbox:~/workspace/pcf-operator-course/${CF_DEPLOYMENT}.yml .`
+- `gcloud compute scp ubuntu@jumpbox:~/workspace/pcf-operator-course/${DEPLOYMENT_NAME}.yml .`
