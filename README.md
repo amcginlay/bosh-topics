@@ -56,4 +56,6 @@ sudo sh -c \
 
 ## Local File Copy Syntax
 
+Run this command from your local machine:
+
 - `gcloud compute scp ubuntu@jumpbox:~/workspace/pcf-operator-course/${DEPLOYMENT_NAME}.yml .`
