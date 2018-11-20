@@ -56,6 +56,10 @@ sudo sh -c \
 
 ## Local File Copy Syntax
 
-Run this command from your local machine:
+After running this command on your jumpbox ...
+
+- `bosh -d ${DEPLOYMENT_NAME} manifest > ${DEPLOYMENT_NAME}.yml`
+
+... run this command from your local machine:
 
 - `gcloud compute scp ubuntu@jumpbox:~/workspace/pcf-operator-course/${DEPLOYMENT_NAME}.yml .`
