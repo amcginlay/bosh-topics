@@ -47,7 +47,7 @@ sudo sh -c \
 - `bosh deployments`
 - `bosh instances --ps`
 - `bosh cloud-config`
-- `bosh manifest` <- download cf manifest and collapse YAML sections using a good text editor
+- `bosh manifest > ${DEPLOYMENT_NAME}.yml`
 - `bosh errands`
 - `bosh ssh`
 - `bosh logs`
