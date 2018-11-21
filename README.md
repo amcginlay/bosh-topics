@@ -54,7 +54,7 @@ sudo sh -c \
 - `bosh -d ${DEPLOYMENT_NAME} logs`
 - `bosh -d ${DEPLOYMENT_NAME} variables`
 
-## Local File Copy Syntax
+## Downloading BOSH manifests
 
 After running this command on your jumpbox ...
 
