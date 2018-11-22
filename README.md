@@ -64,6 +64,6 @@ After running this command on your jumpbox ...
 
 - `gcloud compute scp ubuntu@jumpbox:~/workspace/pcf-operator-course/${DEPLOYMENT_NAME}.yml .`
 
-## GCP SSH to the BOSH director VM
+## SSH to the BOSH director VM (GCP)
 
 - `gcloud compute ssh "vcap@${BOSH_DIRECTOR_VM_NAME}" --project "${PROJECT_ID}" --zone "${VM_ZONE}"`
