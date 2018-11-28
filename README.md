@@ -38,7 +38,7 @@ sudo sh -c \
 
 ## Open The Communications Channels
 
-This section is only required if your jumpbox is outside of the BOSH director's network
+This section is only required if your jumpbox is outside the BOSH director's network
 
 ```bash
 gcloud compute networks peerings create default-to-${PCF_SUBDOMAIN_NAME}-pcf-network \
