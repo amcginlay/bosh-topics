@@ -40,7 +40,9 @@ sudo sh -c \
 
 - `bosh --help`
 - `bosh env`
-- `bosh tasks --recent=30`
+- `bosh tasks`
+- `bosh tasks --recent=20`
+- `bosh tasks --recent=30 --all`
 - `bosh task --debug`
 - `bosh stemcells`
 - `bosh releases`
