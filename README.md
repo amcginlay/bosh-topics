@@ -36,6 +36,28 @@ sudo sh -c \
           > /var/tempest/workspaces/default/root_ca_certificate"
 ```
 
+## Open The Communications Channels
+
+```bash
+gcloud compute networks peerings create default-to-${PCF_SUBDOMAIN_NAME}-pcf-network \
+  --network=default \
+  --peer-network=${PCF_SUBDOMAIN_NAME}-pcf-network \
+  --auto-create-routes
+
+gcloud compute networks peerings create ${PCF_SUBDOMAIN_NAME}-pcf-network-to-default \
+  --network=${PCF_SUBDOMAIN_NAME}-pcf-network \
+  --peer-network=default \
+  --auto-create-routes
+  
+gcloud compute --project=${PCF_PROJECT_ID} firewall-rules create bosh \
+ --direction=INGRESS \
+ --priority=1000 \
+ --network=${PCF_SUBDOMAIN_NAME}-pcf-network \
+ --action=ALLOW \
+ --rules=tcp:25555,tcp:8443,tcp:22 \
+ --source-ranges=0.0.0.0/0
+```
+
 ## Non-Destructive Commands
 
 - `bosh --help`
@@ -68,4 +90,4 @@ After running this command on your jumpbox ...
 
 ## SSH to the BOSH director VM (GCP)
 
-- `gcloud compute ssh "vcap@${BOSH_DIRECTOR_VM_NAME}" --project "${PROJECT_ID}" --zone "${VM_ZONE}"`
+- `gcloud compute ssh "vcap@${BOSH_DIRECTOR_VM_NAME}" --project "${PCF_PROJECT_ID}" --zone "${PCF_AZ_1}"`
