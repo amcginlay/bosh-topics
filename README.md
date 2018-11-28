@@ -36,7 +36,7 @@ sudo sh -c \
           > /var/tempest/workspaces/default/root_ca_certificate"
 ```
 
-## Open The Communications Channels
+## Open The Communications Channels (GCP)
 
 This section is only required if your jumpbox is outside the BOSH director's network
 
