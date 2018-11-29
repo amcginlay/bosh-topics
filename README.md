@@ -92,4 +92,10 @@ After running this command on your jumpbox ...
 
 ## SSH to the BOSH director VM (GCP)
 
-- `gcloud compute ssh "vcap@${BOSH_DIRECTOR_VM_NAME}" --project "${PCF_PROJECT_ID}" --zone "${PCF_AZ_1}"`
+(draft version)
+
+```bash
+echo "CONTENT-OF-BBR-PRIVATE-KEY" | sed 's/\\n/\n/g' > bbr.key
+chmod og-rw bbr.key
+ssh bbr@10.0.0.10 -i bbr.key
+```
