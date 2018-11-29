@@ -92,7 +92,7 @@ After running this command on your jumpbox ...
 
 ## SSH to the BOSH director VM (GCP)
 
-(draft version)
+(draft version - use `/api/v0/deployed/director/credentials/bbr_ssh_credentials`)
 
 ```bash
 echo "CONTENT-OF-BBR-PRIVATE-KEY" | sed 's/\\n/\n/g' > bbr.key
