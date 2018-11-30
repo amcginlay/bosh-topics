@@ -90,12 +90,20 @@ After running this command on your jumpbox ...
 
 - `gcloud compute scp ubuntu@jumpbox:~/workspace/pcf-operator-course/${DEPLOYMENT_NAME}.yml .`
 
-## SSH to the BOSH director VM (GCP)
+## SSH from jumpbox to BOSH director VM (GCP)
 
-(draft version - use `/api/v0/deployed/director/credentials/bbr_ssh_credentials`)
+This technique uses `bbr_ssh_credentials`
 
 ```bash
-echo "CONTENT-OF-BBR-PRIVATE-KEY" | sed 's/\\n/\n/g' > bbr.key
-chmod og-rw bbr.key
-ssh bbr@10.0.0.10 -i bbr.key
+KEYFILE=$(mktemp)
+om \
+  --skip-ssl-validation \
+  --target ${PCF_OPSMAN_FQDN} \
+  --username admin \
+  --password ${PCF_OPSMAN_ADMIN_PASSWD} \
+  curl \
+    --silent \
+    --path /api/v0/deployed/director/credentials/bbr_ssh_credentials | \
+      jq --raw-output '.credential.value.private_key_pem' > ${KEYFILE}
+ssh -i ${KEYFILE} bbr@10.0.0.10
 ```
