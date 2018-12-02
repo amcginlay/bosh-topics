@@ -107,3 +107,5 @@ om \
       jq --raw-output '.credential.value.private_key_pem' > ${KEYFILE}
 ssh -i ${KEYFILE} bbr@10.0.0.10
 ```
+
+When sifting thorugh JSON on BOSH VMs, consider `python -m json.tool` as a replacement for `jq`
