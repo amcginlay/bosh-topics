@@ -17,6 +17,7 @@ export $( \
 ```
 
 Use `env | grep BOSH` to inspect the result of the above.
+Follow the next section to establish BOSH cli connectivity
 
 ## Copy Root CA Certificate
 
@@ -36,7 +37,7 @@ sudo sh -c \
           > /var/tempest/workspaces/default/root_ca_certificate"
 ```
 
-Now test connectivity with `bosh env`
+Now test BOSH cli connectivity with `bosh env`
 
 ## Open The Communications Channels (GCP)
 
