@@ -37,7 +37,8 @@ sudo sh -c \
           > /var/tempest/workspaces/default/root_ca_certificate"
 ```
 
-Now test BOSH cli connectivity with `bosh env`
+Now test BOSH cli connectivity with `bosh env`.
+If this fails you may need to open the communication channels (see below).
 
 ## Open The Communications Channels (GCP)
 
@@ -62,6 +63,8 @@ gcloud compute --project=${PCF_PROJECT_ID} firewall-rules create bosh \
  --rules=tcp:25555,tcp:8443,tcp:22 \
  --source-ranges=0.0.0.0/0
 ```
+
+Now test BOSH cli connectivity with `bosh env`.
 
 ## Non-Destructive Commands
 
