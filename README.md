@@ -46,6 +46,7 @@ If this fails you may need to open the communication channels (see below).
 ## Open The Communications Channels (GCP)
 
 This section is only required if your jumpbox is outside the BOSH director's network
+and you haven't already performed these steps.
 
 ```bash
 gcloud compute networks peerings create default-to-${PCF_SUBDOMAIN_NAME}-pcf-network \
