@@ -16,6 +16,9 @@ export $( \
 )
 ```
 
+If you're using a `.env` file, you may choose to paste the above lines into it so the
+credentials are always available.
+
 Use `env | grep BOSH` to inspect the result of the above.
 Follow the next section to establish BOSH cli connectivity
 
