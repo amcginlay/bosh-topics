@@ -44,7 +44,7 @@ sudo sh -c \
           > /var/tempest/workspaces/default/root_ca_certificate"
 ```
 
-Now test BOSH cli connectivity with `bosh env`.
+Now, from the jumpbox, test BOSH cli connectivity with `bosh env`.
 If this fails you may need to __Open The Communication Channels__ (see below).
 
 ## Non-Destructive Commands
