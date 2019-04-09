@@ -24,6 +24,10 @@ Follow the next section to establish BOSH cli connectivity
 
 ## Copy Root CA Certificate
 
+The following steps effectively fool the BOSH director into thinking that your jumpbox
+has the same trust level as your Ops Manager.
+Think twice before doing this in a production PCF environment.
+
 ```bash
 sudo mkdir -p /var/tempest/workspaces/default
 
